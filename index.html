@@ -15,6 +15,37 @@
         <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
+
+
+
+
+<!-- Add this code to the head section of your website -->
+<style>.chat-widget{position:fixed;bottom:30px;right:30px;width:60px;height:60px;border-radius:50%;background-color:#fff;display:flex;justify-content:center;align-items:center;cursor:pointer;box-shadow:0 3px 6px rgba(0,0,0,.16),0 3px 6px rgba(0,0,0,.23);z-index:1000}.chat-widget img{width:32px;height:32px;padding:4px}.chat-iframe-container{position:fixed;bottom:100px;right:30px;width:400px;height:500px;border:1px solid #ccc;border-radius:10px;padding:10px;box-shadow:0 3px 6px rgba(0,0,0,.16),0 3px 6px rgba(0,0,0,.23);z-index:1000;display:none}.chat-iframe-container iframe{width:100%;height:100%;border:none}.close-button{position:absolute;top:-12px;right:-12px;width:24px;height:24px;border-radius:50%;background-color:#000;color:#fff;display:flex;justify-content:center;align-items:center;cursor:pointer;font-size:18px;font-weight:bold;box-shadow:0 3px 6px rgba(0,0,0,.16),0 3px 6px rgba(0,0,0,.23)}@media (max-width:767px){.chat-iframe-container{width:90%;height:80%;bottom:10px;right:5%;padding:5px}}</style>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  var chatWidget = document.createElement("div");
+  chatWidget.id = "chatWidget";
+  chatWidget.className = "chat-widget";
+  chatWidget.innerHTML = '<img src="//s3.amazonaws.com/appforest_uf/f1680874609402x377392072785720700/Bubble-white.png" alt="Chat">';
+  var chatIframeContainer = document.createElement("div");
+  chatIframeContainer.id = "chatIframeContainer";
+  chatIframeContainer.className = "chat-iframe-container";
+  chatIframeContainer.innerHTML = '<div class="close-button" id="closeButton">×</div><iframe src="https://app.chatiq.ai/chatbot3d/craiglockwood/English" name="myiFrame" scrolling="yes"></iframe>';
+  document.body.appendChild(chatWidget);
+  document.body.appendChild(chatIframeContainer);
+  document.getElementById('chatWidget').addEventListener('click', function() {
+    document.getElementById('chatIframeContainer').style.display = 'block';
+  });
+  document.getElementById('closeButton').addEventListener('click', function() {
+    document.getElementById('chatIframeContainer').style.display = 'none';
+  });
+});
+</script>
+
+
+
+
+        
     </head>
     <body id="page-top">
        
